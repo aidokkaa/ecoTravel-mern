@@ -15,7 +15,7 @@ export const Home=()=>{
             <h1>Зоны для отдыха</h1>
              <Featured></Featured>
              <h1 className="homeTitle">
-                Здесь вы найдете:
+                Развлечений
              </h1>
              <PropertyList></PropertyList>
              <MailList></MailList>
