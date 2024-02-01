@@ -25,7 +25,13 @@ mongoose.connection.on("connected",()=>{
     console.log("mongoDb connected")
 })
 app.use(express.json());
-app.use(cors())
+app.use(cors(
+    {
+        origin:[],
+        methods:["POST","GET"],
+        credentials:true
+    }
+))
 app.use(cookieParser())
 app.use('/api/auth',authRoute);
 app.use('/api/hotels',hotelsRoute)
