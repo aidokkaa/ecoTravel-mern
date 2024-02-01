@@ -27,7 +27,7 @@ mongoose.connection.on("connected",()=>{
 app.use(express.json());
 app.use(cors(
     {
-        origin:["https://eco-travel-kst8lww00-aidokkaa.vercel.app"],
+        origin:["https://eco-travel.vercel.app/"],
         methods:["POST","GET"],
         credentials:true
     }
