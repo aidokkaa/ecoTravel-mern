@@ -10,7 +10,7 @@ export const Featured = () => {
     borderColor: "green",
   };
   const { data, loading, error } = useFetch(
-    "hotels/countByCity?cities=berlin,madrid,london"
+    `${process.env.REACT_APP_API_URL}/hotels/countByCity?cities=berlin,madrid,london`
   );
 
   console.log(data)
@@ -36,7 +36,7 @@ export const Featured = () => {
           />
           <div className="featuredTitles">
             <h1>Наша дача</h1>
-            {/* <h2>{data[0]}</h2> */}
+            <h2>{data[0]}</h2>
           </div>
         </div>
         

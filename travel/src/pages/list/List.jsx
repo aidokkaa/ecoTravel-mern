@@ -19,7 +19,8 @@ export const List = () => {
   const [min,setMin] = React.useState(undefined);
   const [max,setMax] = React.useState(undefined)
   const { data, loading, error, reFetch } = useFetch(
-    `/hotels?city=${destination}`);
+    `/hotels?city=${destination}}`
+  );
     const handleClick=()=>{
       reFetch()
     }

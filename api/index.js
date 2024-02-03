@@ -25,13 +25,7 @@ mongoose.connection.on("connected",()=>{
     console.log("mongoDb connected")
 })
 app.use(express.json());
-app.use(cors(
-    {
-        origin:["https://eco-travel.vercel.app/"],
-        methods:["POST","GET"],
-        credentials:true
-    }
-))
+app.use(cors())
 app.use(cookieParser())
 app.use('/api/auth',authRoute);
 app.use('/api/hotels',hotelsRoute)
@@ -39,7 +33,7 @@ app.use('/api/rooms',roomsRoute)
 app.use('/api/users',usersRoute);
 
 
-app.listen(8800,()=>{
+app.listen(process.env.PORT || 8800,()=>{
     connect()
     console.log('api work')
 })
